@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Zen Antique Soft', 'helvetica', sans-serif;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+}
+
+.loading .loading-txt {
+  font-size: 2.6rem;
+  color: #333;
+}
+
+.loading .loading-wrap {
+  width: 40rem;
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.loading .loading-txt {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+.loading .logo {
+  position: absolute; 
+  text-align: center;
+  color:#333;
+  font-size: 5rem;
+  background-size: 100%;
+  margin-top: -6rem;
+}
+
+/*-- helps --*/
+.helps {
+  width: 58rem;
+  height: 33rem;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.helps .helps-title {
+  color: #fff;
+  font-size: 20px;
+}
+
+.helps .helps-info  {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.helps .helps-info > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.helps .helps-keyboard-graph {
+  width: 100%;
+  height: 10rem;
+  background: url(~/src/img/keyboard.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
+
+.helps .helps-mouse-graph {
+  width: 100%;
+  height: 10rem;
+  background: url(~/src/img/mousemove.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  transform: scale(0.7);
+}
+
+.helps .helps-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.helps .helps-text {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.helps .helps-button {
+  color: #fff;
+  font-size: 1.8rem;
+  border: 2px solid rgba(255, 255, 255, 1);
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  cursor: pointer;
+  transform: scale(0.9)
+}
+
+/*-- detail --*/
+.detail {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail .detail-wrap {
+  width: 70%;
+  min-width: 1200px;
+  height: 60rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 2rem;
+  z-index: 10;
+  padding: 6rem 7rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1200px) {
+  .detail .detail-wrap {
+    width: 80%;
+    height: auto !important;
+    min-width: auto;
+  }
+  .detail .detail-image {
+    margin-top: 2rem;
+    display: none;
+  }
+}
+
+.detail .detail-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.detail .detail-author {
+  margin-top: 1.5rem;
+}
+
+.detail dl {
+  margin-top: 1.5rem;
+}
+
+.detail dl dd {
+  margin-top: 1.2rem;
+}
+
+
+.detail .detail-info {
+  color: #fff;
+  font-size: 2rem;
+  font-family: helvetica;
+}
+
+.detail .detail-image {
+  padding-left: 5rem;
+}
+
+.detail .detail-image .image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.detail .detail-image .image img {
+  max-width: 100%;
+  max-height: 40rem;;
+  object-fit: contain;
+  display: block;
+}
+
+.detail .detail-share {
+  bottom: 5rem;
+}
+
+.detail .detail-share .share-title {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.detail .detail-share ul {
+  display: flex;
+  margin-top: 1.2rem;
+}
+
+.detail .detail-share ul li {
+  width: 2.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.detail .detail-share ul li img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.detail .detail-date {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  text-align: right;
+  font-family: helvetica;
+}
+
+.detail .detail-genre {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: right;
+  font-family: helvetica;
+}
+
+.detail .detail-close {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color:#fff;
+  z-index: 10;
+  border-radius: 50%;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.detail .detail-close::before {
+  content: '';
+  position: absolute;
+  height: 2.5rem;
+  width: 5px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+
+.detail .detail-close::after {
+  content: '';
+  position: absolute;
+  height: 2.5rem;
+  width: 5px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #000;
+  transform: rotate(-45deg);
+}
+
+/*-- view tip --*/
+.view-tip {
+  position: absolute;
+  width: 20rem;
+  height: 10rem;
+  color: #fff;
+  font-size: 1.8rem;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+/*-- animation --*/
+.fadeOut {
+  animation: fadeOut 300ms ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 300ms ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.zoomInOut {
+  animation: zoomInOut 1s ease-out infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 300ms ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+

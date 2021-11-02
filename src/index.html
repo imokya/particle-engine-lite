@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <style>
+      .hide {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div class="loading hide">
+      <div class="loading-wrap">
+        <div class="logo">valtech gallery</div>
+        <div class="loading-txt">30%</div>
+      </div>
+    </div>
+
+    <div class="detail hide">
+      <div class="detail-wrap row">
+        <div class="detail-info col-xl-6 col-lg-12">
+          <div class="detail-title">Artwork Name</div>
+          <div class="detail-author">Artist's Name</div>
+          <dl>
+            <dt>Artwork's Synopsis</dt>
+            <dd>
+              Jackson pollock Squre artwork, Abstract paintings, jackson pollock style art，pollock inspired painting, Jackson pollock inspired art SN145.
+              Jackson pollock Squre artwork, Abstract paintings, jackson pollock style art，pollock inspired painting, Jackson pollock inspired art SN145.
+            </dd>
+          </dl>
+          <div class="detail-share">
+            <div class="share-title">Share Artwork</div>
+            <ul>
+              <li><img src="<%= htmlWebpackPlugin.options.publicPath %>img/share/share.png"></li>
+              <li><img src="<%= htmlWebpackPlugin.options.publicPath %>img/share/email.png"></li>
+              <li><img src="<%= htmlWebpackPlugin.options.publicPath %>img/share/facebook.png"></li>
+              <li><img src="<%= htmlWebpackPlugin.options.publicPath %>img/share/Instagram.png"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-image col-xl-6 col-lg-12">
+          <div class="image">
+            <img src="<%= htmlWebpackPlugin.options.publicPath %>textures/paints/1.jpg">
+          </div>
+          <div class="detail-date">Date of artwork</div>
+          <div class="detail-genre">Artwork Genre</div>
+        </div>
+        <div class="detail-close"></div>
+      </div>
+    </div>
+
+    <div class="view-tip hide">
+      <div class="zoomInOut">
+        Press "Spacebar" to view more detials
+      </div>
+    </div>
+
+    <div class="helps hide">
+      <div class="helps-title">Controls</div>
+      <div class="helps-info">
+        <div class="helps-keyboard">
+          <div class="helps-keyboard-graph helps-graph"></div>
+          <div class="helps-keyboard-text helps-text">use your keyboard to move</div>
+        </div>
+        <div class="helps-mouse">
+          <div class="helps-mouse-graph helps-graph"></div>
+          <div class="helps-mouse-text helps-text">use your mouse to rotate</div>
+        </div>
+      </div>
+      <div class="helps-button">click to start</div>
+    </div>
+
+  </body>
+</html>
